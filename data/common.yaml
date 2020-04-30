@@ -1,0 +1,6 @@
+---
+quay::version: 'naboo'
+quay::checksum: '4783b9e91d60ed715406990542fb70e1'
+quay::http_proxy: ''
+quay::https_proxy: ''
+quay::no_proxy: ''
