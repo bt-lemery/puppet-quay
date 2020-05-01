@@ -23,7 +23,7 @@ class quay::install (
     source        => $download_source,
     checksum      => $checksum,
     checksum_type => 'md5',
-    creates       => "/opt/quay-${version}/quay",
+    creates       => "/opt/quay-${version}/quay-${version}",
     cleanup       => true,
     proxy_server  => $proxy_server,
     require       => File["/opt/quay-${version}"],
@@ -31,7 +31,7 @@ class quay::install (
 
   file { '/opt/quay':
     ensure    => link,
-    target    => "/opt/quay-${version}/quay",
+    target    => "/opt/quay-${version}/quay-${version}",
     subscribe => Archive["/tmp/${version}.tar.gz"],
   }
 
